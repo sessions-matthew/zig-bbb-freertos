@@ -1,0 +1,15 @@
+# Integration of Zig compiler into CDT Managed Make
+ORDERED_OBJS += main_zig.o
+OBJS += main_zig.o
+
+# Platform runner: automatically downloads Zig 0.17.1 if 'zig' is not in PATH
+ifeq ($(OS),Windows_NT)
+    RUN_ZIG := cmd.exe /c "tools\run_zig.bat"
+else
+    RUN_ZIG := ./tools/run_zig.sh
+endif
+
+main_zig.o: $(wildcard ../src/*.zig) $(wildcard ../src/**/*.zig)
+	@echo "Compiling Zig sources (FreeRTOS)..."
+	cd .. && $(RUN_ZIG) build-obj -target arm-freestanding-eabi -mcpu=cortex_a8 -femit-bin=Debug/main_zig.o --dep hal --dep rtos -Mroot=src/main.zig -Mhal=src/hal/root.zig -Mrtos=src/rtos/root.zig
+	@echo "Finished compiling Zig sources"

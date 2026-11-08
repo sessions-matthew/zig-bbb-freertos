@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BeagleBoneZigRTOS",
+            "type": "ccs-debug",
+            "request": "launch",
+            "targetConfig": "/Users/matthewsessions/workspace_ccstheia/BeagleBoneZigRTOS2/targetConfigs/BeagleBone_Black.ccxml",
+            "projectInfo": {
+                "name": "BeagleBoneZigRTOS",
+                "resourceId": "/BeagleBoneZigRTOS"
+            },
+            "stopAtEntry": false,
+            "connections": [
+                {
+                    "name": "Texas Instruments XDS100v2 USB Debug Probe_0",
+                    "cores": [
+                        {
+                            "name": "CortxA8",
+                            "debuggerSettings": {
+                                "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues>\n  <property id=\"AutoRunToLabelName\">\n    <curValue>main</curValue>\n  </property>\n  <property id=\"AutoRunToLabelOnRestart\">\n    <curValue>1</curValue>\n  </property>\n  <property id=\"AutoRunToLabelOnReset\">\n    <curValue>1</curValue>\n  </property>\n  <property id=\"AddCIOBreakpointAfterLoad\">\n    <curValue>1</curValue>\n  </property>\n  <property id=\"AddSemiHostingBreakpointAfterLoad\">\n    <curValue>1</curValue>\n  </property>\n  <property id=\"HaltOnConnect\">\n    <curValue>1</curValue>\n  </property>\n  <property id=\"ConnectOnStartup\">\n    <curValue>1</curValue>\n  </property>\n  <property id=\"EnableInstalledBreakpoint\">\n    <curValue>1</curValue>\n  </property>\n</PropertyValues>\n"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+.{
+    .name = .beaglebone_zig_rtos,
+    .fingerprint = 0x600a64cb4de7e1a6,
+    .version = "0.1.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "freertos",
+        "include",
+        "FreeRTOSConfig.h",
+        "AM335x.lds",
+        "README.md",
+    },
+}

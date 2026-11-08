@@ -1,0 +1,16 @@
+# Zig Build Artifacts and Local Toolchain
+.zig-cache/
+zig-out/
+.zig/
+
+# CCS / Eclipse Managed Build Outputs
+Debug/
+*.out
+*.bin
+*.map
+*.o
+*.d
+
+# OS Metadata
+.DS_Store
+Thumbs.db

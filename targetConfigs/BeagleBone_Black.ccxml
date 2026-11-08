@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+    <configuration XML_version="1.2" id="Texas Instruments XDS100v2 USB Debug Probe_0">
+        <instance XML_version="1.2" desc="Texas Instruments XDS100v2 USB Debug Probe_0" href="connections/TIXDS100v2_Connection.xml" id="Texas Instruments XDS100v2 USB Debug Probe_0" xml="TIXDS100v2_Connection.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="Texas Instruments XDS100v2 USB Debug Probe_0">
+            <instance XML_version="1.2" href="drivers/tixds100v2icepick_d.xml" id="drivers" xml="tixds100v2icepick_d.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2cs_dap.xml" id="drivers" xml="tixds100v2cs_dap.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2cortexM.xml" id="drivers" xml="tixds100v2cortexM.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2cs_child.xml" id="drivers" xml="tixds100v2cs_child.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2cortexA.xml" id="drivers" xml="tixds100v2cortexA.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2csstm.xml" id="drivers" xml="tixds100v2csstm.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2etbcs.xml" id="drivers" xml="tixds100v2etbcs.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2pru.xml" id="drivers" xml="tixds100v2pru.xml" xmlpath="drivers"/>
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="BeagleBone_Black_0" href="boards/beagleboneblack.xml" id="BeagleBone_Black_0" xml="beagleboneblack.xml" xmlpath="boards"/>
+                <board XML_version="1.2" description="BeagleBone Black AM3359 Board" id="BeagleBone_Black_0">
+                    <device HW_revision="1" XML_version="1.2" description="AM33x - Cortex A8 Embedded Processor" id="AM3359_0" partnum="AM3359">
+                        <router HW_revision="1.0" XML_version="1.2" description="ICEPick_D Router" id="IcePick_D_0" isa="ICEPICK_D">
+                            <subpath desc="DAP" id="subpath_12">
+                                <property Type="numericfield" Value="0xc" id="Port Number"/>
+                                <router HW_revision="1.0" XML_version="1.2" description="CS_DAP Router" id="CS_DAP_0" isa="CS_DAP">
+                                    <property Type="numericfield" Value="0x4b6b902f" id="DAP TAP ID"/>
+                                    <property Type="filepathfield" Value="/Applications/ti/ccs2101/ccs/ccs_base/emulation/gel/AM335x_trace_dapdebugss.gel" id="GEL File"/>
+                                    <subpath id="ModenaSS">
+                                        <property Type="numericfield" Value="0x0" id="Port Number"/>
+                                        <property Type="choicelist" Value="2" id="Type"/>
+                                        <property Type="choicelist" Value="1" id="Pseudo"/>
+                                        <cpu HW_revision="1.0" XML_version="1.2" desc="CortxA8" description="Cortex_A8 CPU" id="CortexA8" isa="Cortex_A8">
+                                            <property Type="numericfield" Value="0x80001000" id="Address"/>
+                                            <property Type="numericfield" Value="0x1" id="TraceDeviceId"/>
+                                            <property Type="filepathfield" Value="/Applications/ti/ccs2101/ccs/ccs_base/emulation/boards/beaglebone/gel/beagleboneblack.gel" id="GEL File"/>
+                                        </cpu>
+                                    </subpath>
+                                </router>
+                            </subpath>
+                        </router>
+                    </device>
+                </board>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>
